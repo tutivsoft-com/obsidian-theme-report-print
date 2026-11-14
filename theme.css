@@ -1,0 +1,110 @@
+/* Report Print 1.0.0. MIT. */
+
+body.theme-light {
+  --background-primary: #ffffff;
+  --background-primary-alt: #ffffff;
+  --background-secondary: #f0f3f6;
+  --background-secondary-alt: #f0f3f6;
+  --background-modifier-form-field: #ffffff;
+  --background-modifier-border: #8596a5;
+  --background-modifier-border-hover: #8596a5;
+  --background-modifier-border-focus: #1c4b78;
+  --background-modifier-hover: color-mix(in srgb, #1c4b78 12%, #f0f3f6);
+  --background-modifier-active-hover: color-mix(in srgb, #1c4b78 18%, #f0f3f6);
+  --text-normal: #152739;
+  --text-muted: #3e5469;
+  --text-faint: #3e5469;
+  --text-accent: #1c4b78;
+  --text-accent-hover: #614383;
+  --text-on-accent: #ffffff;
+  --interactive-accent: #1c4b78;
+  --interactive-accent-hover: #614383;
+  --text-selection: color-mix(in srgb, #1c4b78 25%, #ffffff);
+  --text-highlight-bg: color-mix(in srgb, #834221 23%, #ffffff);
+  --color-blue: #1c4b78;
+  --color-orange: #834221;
+  --color-green: #1c604b;
+  --color-purple: #614383;
+  --code-background: #f0f3f6;
+  --code-normal: #152739;
+  --code-comment: #3e5469;
+  --code-function: #1c4b78;
+  --code-keyword: #614383;
+  --code-string: #1c604b;
+  --link-color: #1c4b78;
+  --link-external-color: #1c604b;
+  --icon-color: #3e5469;
+  --nav-item-color: #3e5469;
+  --nav-item-color-active: #152739;
+  --tab-text-color: #3e5469;
+}
+body.theme-dark {
+  --background-primary: #18222e;
+  --background-primary-alt: #18222e;
+  --background-secondary: #23303e;
+  --background-secondary-alt: #23303e;
+  --background-modifier-form-field: #18222e;
+  --background-modifier-border: #778da5;
+  --background-modifier-border-hover: #778da5;
+  --background-modifier-border-focus: #a5d0fa;
+  --background-modifier-hover: color-mix(in srgb, #a5d0fa 12%, #23303e);
+  --background-modifier-active-hover: color-mix(in srgb, #a5d0fa 18%, #23303e);
+  --text-normal: #eef4fa;
+  --text-muted: #becddd;
+  --text-faint: #becddd;
+  --text-accent: #a5d0fa;
+  --text-accent-hover: #d9c0f6;
+  --text-on-accent: #18222e;
+  --interactive-accent: #a5d0fa;
+  --interactive-accent-hover: #d9c0f6;
+  --text-selection: color-mix(in srgb, #a5d0fa 25%, #18222e);
+  --text-highlight-bg: color-mix(in srgb, #f4bc8b 23%, #18222e);
+  --color-blue: #a5d0fa;
+  --color-orange: #f4bc8b;
+  --color-green: #a1e0c1;
+  --color-purple: #d9c0f6;
+  --code-background: #23303e;
+  --code-normal: #eef4fa;
+  --code-comment: #becddd;
+  --code-function: #a5d0fa;
+  --code-keyword: #d9c0f6;
+  --code-string: #a1e0c1;
+  --link-color: #a5d0fa;
+  --link-external-color: #a1e0c1;
+  --icon-color: #becddd;
+  --nav-item-color: #becddd;
+  --nav-item-color-active: #eef4fa;
+  --tab-text-color: #becddd;
+}
+
+.markdown-rendered th { background: var(--background-secondary); color: var(--text-normal); }
+.markdown-rendered tbody tr:nth-child(even) { background: var(--background-secondary); }
+@media print {
+  body, .markdown-rendered {
+    --text-normal: #182735;
+    --text-muted: #3c5064;
+    --text-accent: #1c4b78;
+    --background-primary: #fff;
+    --background-secondary: #eef2f5;
+    background: #fff;
+    color: #182735;
+  }
+  .markdown-rendered :is(h1,h2,h3,h4,h5,h6) { break-after: avoid; color: #1c4b78; }
+  .markdown-rendered :is(.callout,tr,pre,figure) { break-inside: avoid; }
+  .markdown-rendered thead { display: table-header-group; }
+  .markdown-rendered :is(img, table) { max-width: 100%; }
+  .markdown-rendered pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+  .markdown-rendered p { orphans: 3; widows: 3; }
+}
+
+.workspace-leaf-content :focus-visible,
+.modal :focus-visible,
+.menu :focus-visible {
+  outline: 2px solid var(--text-accent);
+  outline-offset: -2px;
+}
+
+.markdown-rendered .list-bullet::after,
+.markdown-source-view .list-bullet::after {
+  background-color: var(--text-muted);
+}
