@@ -2,7 +2,7 @@
 
 A professional Obsidian document theme with a planned print and PDF stylesheet.
 
-Source version 1.0.1. Modes supported: Dark and light. Tested in Obsidian 1.15.1 on Windows.
+Source version 3.6.0. Modes supported: Dark and light. Tested in Obsidian 1.15.1 on Windows.
 
 The stylesheet includes print rules for tables, callouts and code. Page breaks can vary with the export engine.
 
