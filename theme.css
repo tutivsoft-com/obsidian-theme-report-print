@@ -1,4 +1,4 @@
-/* Report Print 1.0.0. MIT. */
+/* Report Print 1.0.1. MIT. */
 
 body.theme-light {
   --background-primary: #ffffff;
@@ -95,6 +95,10 @@ body.theme-dark {
   .markdown-rendered :is(img, table) { max-width: 100%; }
   .markdown-rendered pre { white-space: pre-wrap; overflow-wrap: anywhere; }
   .markdown-rendered p { orphans: 3; widows: 3; }
+}
+
+.is-mobile .markdown-source-view.mod-cm6 .cm-contentContainer > .cm-content {
+  padding-inline: 8px;
 }
 
 .workspace-leaf-content :focus-visible,
