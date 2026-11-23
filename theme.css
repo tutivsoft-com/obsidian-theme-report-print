@@ -1,4 +1,4 @@
-/* Report Print 3.6.0. MIT. */
+/* Report Print 3.6.1. MIT. */
 
 body.theme-light {
   --background-primary: #ffffff;
@@ -80,17 +80,27 @@ body.theme-dark {
 .markdown-rendered th { background: var(--background-secondary); color: var(--text-normal); }
 .markdown-rendered tbody tr:nth-child(even) { background: var(--background-secondary); }
 @media print {
-  body, .markdown-rendered {
+  body, body.theme-light, body.theme-dark, .markdown-rendered {
     --text-normal: #182735;
     --text-muted: #3c5064;
+    --text-faint: #3c5064;
     --text-accent: #1c4b78;
+    --link-color: #1c4b78;
+    --link-external-color: #1c604b;
     --background-primary: #fff;
     --background-secondary: #eef2f5;
+    --background-modifier-border: #8596a5;
+    --code-background: #eef2f5;
+    --code-normal: #182735;
+    --code-comment: #3c5064;
+    --code-function: #1c4b78;
+    --code-keyword: #614383;
+    --code-string: #1c604b;
     background: #fff;
     color: #182735;
   }
-  .markdown-rendered :is(h1,h2,h3,h4,h5,h6) { break-after: avoid; color: #1c4b78; }
-  .markdown-rendered :is(.callout,tr,pre,figure) { break-inside: avoid; }
+  .markdown-rendered :is(h1, h2, h3, h4, h5, h6) { break-after: avoid; color: var(--text-accent); }
+  .markdown-rendered :is(.callout, tr, pre, figure) { break-inside: avoid; }
   .markdown-rendered thead { display: table-header-group; }
   .markdown-rendered :is(img, table) { max-width: 100%; }
   .markdown-rendered pre { white-space: pre-wrap; overflow-wrap: anywhere; }

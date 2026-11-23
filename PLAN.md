@@ -1,10 +1,12 @@
-# Report Print
+# Report Print original design plan
+
+This is the historical plan from 13 November 2026. See the [README](README.md) for the current theme and installation steps.
 
 A professional Obsidian document theme with a planned print and PDF stylesheet.
 
-**Status: planning only. No theme code has been written.**
+**Status at the time: planning only.**
 
-Plan date: 13 November 2026. This repository currently contains this planning README only. The name is a descriptive working name; Community name availability must be checked before any future submission.
+Plan date: 13 November 2026. The repository initially contained only this plan. The working name still needed a Community directory availability check.
 
 Search keywords: Obsidian theme, PDF export, print, reports, document typography, tables.
 
@@ -18,7 +20,7 @@ Users ask why their theme colours and formatting disappear during PDF export and
 
 - [Request to export a PDF with theme styling](https://www.reddit.com/r/ObsidianMD/comments/1i4f1g4/)
 
-The Reddit links come from the preceding idea research and represent qualitative demand, not a market-size estimate or proof that existing themes do not solve the problem. For Pure OLED Rainbow, the additional requirement comes directly from the owner. Other themes and snippets may already address parts of these needs.
+The request came from the preceding idea research. Other themes and snippets may address parts of this need.
 
 ## Planned appearance and features
 
@@ -51,7 +53,7 @@ Official references for later implementation:
 - [Submit a theme](https://docs.obsidian.md/Themes/App%20themes/Submit%20your%20theme)
 - [Developer policies](https://docs.obsidian.md/community-directory/developer-policies)
 
-These are future work items. No release, installation instructions, compatibility certification or Community listing is being claimed by this planning repository.
+These references supported the original implementation and release plan.
 
 ## Acceptance checklist for later implementation
 
@@ -62,6 +64,6 @@ These are future work items. No release, installation instructions, compatibilit
 - [ ] Review screenshots for private information and verify all published documentation and asset paths.
 - [ ] Verify the default branch, release revision and uploaded assets before calling any future release complete.
 
-## Current boundary
+## Scope of the original planning task
 
-Only repository creation and this Markdown plan are authorised in this task. Do not add theme CSS, manifests, screenshots, release tags or submissions as part of this planning work. Future work stays on this repository's verified primary branch.
+The original task covered repository creation and this plan. Theme source, screenshots and published releases followed in later work.
