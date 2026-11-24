@@ -2,15 +2,17 @@
 
 An Obsidian theme for reading notes on screen and exporting reports, handouts and other documents to PDF.
 
-Source version 3.6.1. The theme supports dark and light screen modes and requires Obsidian 1.15.1 or newer.
+Source version 3.6.2. The theme supports dark and light screen modes and requires Obsidian 1.15.1 or newer.
 
-Print uses a white page with dark text, blue internal links and green external links. The stylesheet asks the print engine to repeat table headers, keep headings with the following text and wrap long code lines. Pagination and background shading can vary with the export engine.
+Print uses a white page with dark body and callout title text, blue internal links and green external links. The stylesheet asks the print engine to repeat table headers, keep headings with the following text and wrap long code lines. Pagination and background shading can vary with the export engine.
 
 ## Preview
 
 ![Dark mode](screenshot.png)
 
 ![Light mode](screenshot-light.png)
+
+[Desktop and PDF verification](docs/ui-qa-2026-11-24/README.md)
 
 ## Install
 

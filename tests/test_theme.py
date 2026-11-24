@@ -38,6 +38,7 @@ def declarations_by_element(css, theme_class, medium):
         <body id="page" class="{theme_class}">
           <article id="note" class="markdown-rendered">
             <h2 id="heading">Heading</h2>
+            <div class="callout"><div id="callout-title" class="callout-title">Tip</div></div>
             <table><thead id="headers"><tr><th>Column</th></tr></thead>
               <tbody><tr id="row"><td>One</td></tr><tr><td>Two</td></tr></tbody>
             </table>
@@ -97,6 +98,14 @@ class ThemeTest(unittest.TestCase):
         self.assertEqual(dark["note"]["--background-primary"], "#18222e")
         self.assertEqual(dark["note"]["--link-color"], "#a5d0fa")
         self.assertEqual(dark["note"]["--code-normal"], "#eef4fa")
+
+    def test_callout_titles_use_dark_text_only_in_print(self):
+        for theme in ("theme-light", "theme-dark", ""):
+            with self.subTest(theme=theme):
+                print_styles = declarations_by_element(self.css, theme, "print")
+                screen_styles = declarations_by_element(self.css, theme, "screen")
+                self.assertEqual(print_styles["callout-title"]["color"], "var(--text-normal)")
+                self.assertNotIn("color", screen_styles["callout-title"])
 
     def test_print_styles_keep_headings_with_text_and_wrap_code(self):
         styles = declarations_by_element(self.css, "theme-dark", "print")
